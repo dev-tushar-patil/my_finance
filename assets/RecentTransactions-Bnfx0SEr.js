@@ -1,0 +1,6 @@
+import{c as m,j as s,S as l,e as p,E as d}from"./index-DhEV1nlC.js";import{L as x}from"./react-Zv7xXW4u.js";import{T as h}from"./TransactionRow-D3_Ze2C6.js";import{u as y}from"./useAsync-BE6SIdoY.js";import{t as j}from"./financeService-DGE5V_dE.js";/**
+ * @license lucide-react v0.453.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const u=m("ArrowRight",[["path",{d:"M5 12h14",key:"1ays0h"}],["path",{d:"m12 5 7 7-7 7",key:"xquz4c"}]]);function A({refreshKey:i=0,size:a=6,title:n="Recent Transactions",className:r}){const{data:t,loading:o}=y(()=>j.list({page:0,size:a}),[i,a]);return s.jsx(l,{title:n,className:r,bodyClass:"px-4 md:px-5 pb-3 pt-1",action:s.jsxs(x,{to:"/transactions",className:"text-xs font-semibold text-primary-600 inline-flex items-center gap-1",children:["View All ",s.jsx(u,{size:13})]}),children:o&&!t?s.jsx("div",{className:"space-y-3 py-2",children:[...Array(4)].map((e,c)=>s.jsx(p,{className:"h-12"},c))}):t!=null&&t.content.length?s.jsx("div",{className:"divide-y divide-slate-100",children:t.content.map(e=>s.jsx(h,{t:e,compact:!0},e.id))}):s.jsx(d,{title:"No transactions yet",message:"Your latest entries will show up here."})})}export{A as R};

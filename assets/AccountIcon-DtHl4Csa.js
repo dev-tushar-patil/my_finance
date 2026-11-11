@@ -1,0 +1,6 @@
+import{c as m,j as o,y as l,a as d,C as r,g as a,W as h}from"./index-DhEV1nlC.js";import{U as i}from"./constants-C_Bi-9eP.js";/**
+ * @license lucide-react v0.453.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const u=m("Banknote",[["rect",{width:"20",height:"12",x:"2",y:"6",rx:"2",key:"9lu3g6"}],["circle",{cx:"12",cy:"12",r:"2",key:"1c9p78"}],["path",{d:"M6 12h.01M18 12h.01",key:"113zkx"}]]),x={CASH:{icon:u,bg:"#E8F7EE",fg:"#16A34A"},SAVINGS:{icon:a,bg:"#FDECEC",fg:"#C62828"},CURRENT:{icon:a,bg:"#E3F2FD",fg:"#1565C0"},CREDIT_CARD:{icon:r,bg:"#EDE7F6",fg:"#5E35B1"},DEBIT_CARD:{icon:r,bg:"#E0F7FA",fg:"#00838F"}};function f({type:e,size:n="md",className:s}){const c=x[e]||{icon:h,bg:"#F1F5F9",fg:"#475569"},t=c.icon,g=n==="sm"?"h-8 w-8 rounded-lg":"h-11 w-11 rounded-xl";return o.jsx("span",{className:d("grid place-items-center shrink-0",g,s),style:{background:c.bg,color:c.fg},children:o.jsx(t,{size:n==="sm"?16:20})})}function C({provider:e,size:n="md"}){const s=i.find(t=>t.value===e)||i[3],c=n==="sm"?"h-8 w-8 rounded-lg":"h-11 w-11 rounded-xl";return o.jsx("span",{className:d("grid place-items-center shrink-0 text-white",c),style:{background:s.color},children:o.jsx(l,{size:n==="sm"?15:19})})}export{f as A,C as U};
