@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-tap-highlight-color: transparent; }
+  body { @apply bg-canvas text-navy font-sans antialiased; }
+  input, select, textarea, button { font: inherit; }
+  ::selection { @apply bg-primary-200; }
+}
+
+@layer components {
+  .card { @apply bg-white rounded-2xl shadow-card border border-slate-100/70; }
+  .label { @apply block text-sm font-medium text-navy-light mb-1.5; }
+  .field {
+    @apply w-full h-12 px-4 rounded-xl border border-slate-200 bg-white text-navy placeholder:text-navy-muted
+           outline-none transition focus:border-primary-500 focus:ring-4 focus:ring-primary-100 disabled:bg-slate-50 disabled:text-navy-muted;
+  }
+  .field-error { @apply border-expense focus:border-expense focus:ring-expense-soft; }
+  .btn { @apply inline-flex items-center justify-center gap-2 h-11 px-5 rounded-xl font-semibold text-sm transition active:scale-[.98] disabled:opacity-60 disabled:pointer-events-none; }
+  .btn-primary { @apply btn bg-primary-600 text-white hover:bg-primary-700 shadow-[0_6px_16px_-6px_rgba(103,58,183,.6)]; }
+  .btn-soft { @apply btn bg-lavender text-primary-700 hover:bg-primary-200; }
+  .btn-ghost { @apply btn text-navy-light hover:bg-slate-100; }
+  .btn-danger { @apply btn bg-expense text-white hover:bg-red-700; }
+  .chip { @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium; }
+  .page-title { @apply text-xl md:text-2xl font-bold text-navy; }
+}
+
+.scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #D1C4E9; border-radius: 99px; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+@media print {
+  aside, nav, .no-print { display: none !important; }
+  main { padding: 0 !important; margin: 0 !important; }
+  body { background: #fff; }
+}
